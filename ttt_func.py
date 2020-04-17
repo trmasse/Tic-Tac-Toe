@@ -8,7 +8,11 @@ def print_grid(grid):
     
 def get_choice():
     print("Player - Make Your Choice: ", end = '')
-    choice = int(input())
+    choice = 0
+    try:
+        choice = int(input())
+    except ValueError:
+        choice = int(input())
     while choice < 1 or choice > 9:
         print("Make a Valid Selection: ")
         choice = int(input())
